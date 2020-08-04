@@ -6,6 +6,9 @@ function Welcome() {
         <header>
             Landing page
         </header>
+        <h1>
+            Welcome    
+        </h1>
       </div>
     );
   }
