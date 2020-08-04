@@ -1,68 +1,67 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Audiofile
 
-## Available Scripts
+Author: Allison Bradley (github: @BestBroBradley)
+version 1.0
 
-In the project directory, you can run:
+## Overview
 
-### `npm start`
+-insert screenshot-
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Audiofile is a resource that allows a user to organize and plan their vinyl library so they can keep track of what they own and plan what they would like to add to their library in the future.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+As someone who recently got into vinyl, I wanted to build a platform to bring my library on-the-go with me.  As a library grows, it becomes harder to remember what's in your collection already.  This platform helps bridge the gap between your home and your favorite local record stores.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Features
 
-### `npm run build`
+Audiofile is your complete vinyl resource, touching on all elements of building and maintaining your collection.
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+-insert screenshot-
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+Tracking your library:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+    - Add albums to your library with lots of optional details for complete customization of your library.  Options include: title, artist, cover art, track listing, price paid, rating, location purchased, condition.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Planning future purchases:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+    - Planning out your wish-list is easy.  Include title, artist, cover art, track listing, price willing to pay, and purchase priority.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Record store search:
+
+    - Audiofile is connected to the Yelp API, allowing you to search for local record shops in your area.  On vacation and looking for a souvenir?  No problem!  Audiofile makes it easy to track down some new records.
+
+
+My First Vinyl:
+
+    -An introductory guide to getting into the hobby of collecting vinyl.
+
+
+### Technologies Used
+
+-insert complete list of technologies-
+
+    - React
+
+    - Create React App
+
+    -
+
+    -
+
+    -
+
+### Future Plans for Audiofile
+
+    Coming soon: the Audiofile app!
+
+
+### 
+
+
 
 ## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+### 
