@@ -1,9 +1,10 @@
 import React from 'react';
 import Welcome from './pages/welcome'
-import { AppWrapper } from './style'
+import { AppWrapper, SiteWrapper } from './style'
 
 function App() {
   return (
+    <SiteWrapper>
     <AppWrapper>
     <div className="App">
       <Welcome/>
@@ -12,6 +13,7 @@ function App() {
       </header>
     </div>
     </AppWrapper>
+    </SiteWrapper>
   );
 }
 
