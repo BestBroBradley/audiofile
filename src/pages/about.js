@@ -12,9 +12,6 @@ function About() {
 
             Audiofile is by vinyl-lovers for vinyl-lovers.  Everything about our platform is designed to be something that we ourselves would love to use.  That means our users are getting a truly intentional and meticulously designed experience.
         </header>
-        <h1>
-            Welcome
-        </h1>/>
       </div>
     );
   }

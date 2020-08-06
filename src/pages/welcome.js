@@ -1,16 +1,13 @@
 import React from 'react';
 
 function Welcome() {
-    return (
-      <div>
-        <header>
-            Landing page
-        </header>
-        <h1>
-            Welcome    
-        </h1>
-      </div>
-    );
-  }
-  
-  export default Welcome;
+  return (
+    <div>
+      <header className="App-header">
+        Welcome to Audiofile!
+      </header>
+    </div>
+  );
+}
+
+export default Welcome;
