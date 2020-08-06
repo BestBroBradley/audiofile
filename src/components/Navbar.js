@@ -6,14 +6,16 @@ function Navbar() {
     return (
         <div>
             <NavWrapper>
+                <Link to="/library">
                 <img alt="logo"/>
+                </Link>
                 <nav>
                     <ul className="nav-links">
-                        <Link to="/library" ><li>My Library</li></Link>
-                        <Link to="/search"><li>Album Search</li></Link>
-                        <Link to="/stores"><li>Store Finder</li></Link>
-                        <Link to="/about"><li>About</li></Link>
-                        <Link to="/basics"><li>Guide to Vinyl</li></Link>
+                        <Link to="/library" className="link"><li>My Library</li></Link>
+                        <Link to="/search" className="link"><li>Album Search</li></Link>
+                        <Link to="/stores" className="link"><li>Store Finder</li></Link>
+                        <Link to="/about" className="link"><li>About</li></Link>
+                        <Link to="/basics" className="link"><li>Guide to Vinyl</li></Link>
                     </ul>
                 </nav>
                 <Link to="/">

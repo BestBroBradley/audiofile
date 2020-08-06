@@ -16,8 +16,8 @@ import { SiteWrapper } from './style'
 function App() {
   return (
     <Router>
-          <Navbar />
       <SiteWrapper>
+          <Navbar />
           <Switch>
           <Route path="/" exact component={Landing}/>
           <Route path="/welcome" component={Welcome}/>
