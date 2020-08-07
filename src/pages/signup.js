@@ -1,9 +1,11 @@
 import React from 'react'
+import NewAcct from "../components/NewAcct"
 
 function Signup() {
    return (
        <>
-       <h1>Sign Up</h1>
+       <h1>We're happy you're here!</h1>
+       <NewAcct/>
        </>
    )
 }
