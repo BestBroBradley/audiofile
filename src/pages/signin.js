@@ -3,7 +3,10 @@ import React from 'react'
 function Signin() {
     return (
         <div>
-        <h1>Sign In</h1>
+        <h1>Welcome Back!</h1>
+        <input id="username" placeholder="username"/>
+        <input id="password" placeholder="password" type="password"/>
+        <button>Sign In</button>
         </div>
 )
 }
