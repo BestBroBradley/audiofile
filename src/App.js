@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState, setState, useContext} from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import Landing from './pages/landing'
 import Welcome from './pages/welcome'
@@ -14,12 +14,22 @@ import Navbar from './components/Navbar'
 import { SiteWrapper } from './style'
 
 function App() {
+
+const [userState, setUser] = useState({
+  loggedin: false,
+  username: "Test User",
+  password: "password",
+  library: [],
+  wishlist: [],
+  stores: []
+})
+
   return (
     <Router>
       <SiteWrapper>
           <Navbar />
           <Switch>
-          <Route path="/" exact component={Landing}/>
+          <Route path="/" exact userState={userState} component={Landing}/>
           <Route path="/welcome" component={Welcome}/>
           <Route path="/library" component={Library}/>
           <Route path="/search" component={Search}/>
