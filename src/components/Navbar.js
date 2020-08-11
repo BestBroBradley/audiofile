@@ -1,8 +1,17 @@
-import React from 'react'
+import React, {useContext} from 'react'
+import UserContext from '../utils/UserContext'
 import { Link } from 'react-router-dom'
 import { NavWrapper } from '../style.js'
 
 function Navbar() {
+
+    const {userState, setUser} = useContext(UserContext)
+
+    const logOut = () => {
+        setUser({...userState, loggedin: false})
+        console.log(userState)
+    }
+
     return (
         <div>
             <NavWrapper>
@@ -19,7 +28,7 @@ function Navbar() {
                     </ul>
                 </nav>
                 <Link to="/">
-                <button>
+                <button onClick={logOut}>
                     Sign Out
                 </button>
                 </Link>

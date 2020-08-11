@@ -28,7 +28,7 @@ const [userState, setUser] = useState({
   return (
     <Router>
       <SiteWrapper>
-        <UserContext.Provider value={userState}>
+        <UserContext.Provider value={{userState, setUser}}>
           <Navbar />
           <Switch>
           <Route path="/" exact component={Landing}/>

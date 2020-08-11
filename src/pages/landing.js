@@ -5,7 +5,7 @@ import Welcome from './welcome'
 
 function Landing() {
 
-    const userState = useContext(UserContext)
+    const {userState} = useContext(UserContext)
 
     console.log(userState)
 

@@ -1,7 +1,7 @@
 import React from 'react'
 
 const UserContext = React.createContext({
-    loggedin: true,
+    loggedin: false,
     username: "Test",
     password: "password",
     library: [],
