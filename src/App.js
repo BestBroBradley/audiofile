@@ -1,5 +1,6 @@
 import React, {useState, setState, useContext} from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import UserContext from './utils/UserContext'
 import Landing from './pages/landing'
 import Welcome from './pages/welcome'
 import About from './pages/about'
@@ -27,9 +28,10 @@ const [userState, setUser] = useState({
   return (
     <Router>
       <SiteWrapper>
+        <UserContext.Provider value={userState, setUser}>
           <Navbar />
           <Switch>
-          <Route path="/" exact userState={userState} component={Landing}/>
+          <Route path="/" exact component={Landing}/>
           <Route path="/welcome" component={Welcome}/>
           <Route path="/library" component={Library}/>
           <Route path="/search" component={Search}/>
@@ -39,6 +41,7 @@ const [userState, setUser] = useState({
           <Route path="/about" component={About}/>
           <Route path="/basics" component={Guide}/>
           </Switch>
+        </UserContext.Provider>
       </SiteWrapper>
     </Router>
   );

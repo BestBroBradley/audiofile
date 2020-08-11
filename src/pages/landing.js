@@ -1,12 +1,13 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import UserContext from '../utils/UserContext'
 import Library from './my-library'
 import Welcome from './welcome'
 
-function Landing(props) {
-    console.log(props)
+function Landing() {
 
-    const loggedIn = props.userState.loggedin
+    const { userState } = useContext(UserContext)
+
+    console.log(userState)
 
     return (
         <>
