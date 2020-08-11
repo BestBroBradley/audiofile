@@ -16,30 +16,31 @@ import { SiteWrapper } from './style'
 
 function App() {
 
-const [userState, setUser] = useState({
-  loggedin: true,
-  username: "Test User",
-  password: "password",
-  library: [],
-  wishlist: [],
-  stores: []
-})
+  const [userState, setUser] = useState({
+    loggedin: true,
+    username: "Test User",
+    password: "password",
+    library: [{ title: "Born in the USA", artist: "Bruce Springsteen", genre: "rock" },
+    { title: "Jazzman", artist: "Carole King", genre: "folk" }, { title: "Meteora", artist: "Linkin Park", genre: "hip hop/rock" }],
+    wishlist: [],
+    stores: []
+  })
 
   return (
     <Router>
       <SiteWrapper>
-        <UserContext.Provider value={{userState, setUser}}>
+        <UserContext.Provider value={{ userState, setUser }}>
           <Navbar />
           <Switch>
-          <Route path="/" exact component={Landing}/>
-          <Route path="/welcome" component={Welcome}/>
-          <Route path="/library" component={Library}/>
-          <Route path="/search" component={Search}/>
-          <Route path="/stores" component={Stores}/>
-          <Route path="/signup" component={Signup}/>
-          <Route path="/signin" component={Signin}/>
-          <Route path="/about" component={About}/>
-          <Route path="/basics" component={Guide}/>
+            <Route path="/" exact component={Landing} />
+            <Route path="/welcome" component={Welcome} />
+            <Route path="/library" component={Library} />
+            <Route path="/search" component={Search} />
+            <Route path="/stores" component={Stores} />
+            <Route path="/signup" component={Signup} />
+            <Route path="/signin" component={Signin} />
+            <Route path="/about" component={About} />
+            <Route path="/basics" component={Guide} />
           </Switch>
         </UserContext.Provider>
       </SiteWrapper>

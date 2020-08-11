@@ -1,10 +1,27 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import UserContext from '../utils/UserContext'
+import CardContainer from "../components/CardContainer"
 
 function Library() {
-    return (
+
+  const {userState} = useContext(UserContext)
+  const library = userState.library
+  console.log(library)
+
+  return (
       <div>
         <header>
-            My Library
+            Welcome back, {userState.username}!
+            <h1>Your Collection</h1>
+            <input placeholder="search"/>
+            <button>Search</button>
+            <h2>By...</h2>
+            <button>Album</button>
+            <button>Artist</button>
+            <button>Genre</button>
+            <button>Date Acquired</button>
+            {library.map(item => 
+              <CardContainer item={item}/>)}
         </header>
       </div>
     );
