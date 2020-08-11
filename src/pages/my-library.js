@@ -21,7 +21,7 @@ function Library() {
             <button>Genre</button>
             <button>Date Acquired</button>
             {library.map(item => 
-              <CardContainer item={item}/>)}
+              <CardContainer key={item.title} item={item}/>)}
         </header>
       </div>
     );
