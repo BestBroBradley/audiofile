@@ -1,4 +1,4 @@
-import React, {useState, setState, useContext} from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import UserContext from './utils/UserContext'
 import Landing from './pages/landing'
@@ -17,7 +17,7 @@ import { SiteWrapper } from './style'
 function App() {
 
 const [userState, setUser] = useState({
-  loggedin: false,
+  loggedin: true,
   username: "Test User",
   password: "password",
   library: [],
@@ -28,7 +28,7 @@ const [userState, setUser] = useState({
   return (
     <Router>
       <SiteWrapper>
-        <UserContext.Provider value={userState, setUser}>
+        <UserContext.Provider value={userState}>
           <Navbar />
           <Switch>
           <Route path="/" exact component={Landing}/>
