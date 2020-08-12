@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Screen(props) {
+function ScreenTwo(props) {
     return(
         <div>
             <h1>Hello, I am the {props.current} screen</h1>
@@ -8,4 +8,4 @@ function Screen(props) {
     )
 }
 
-export default Screen
+export default ScreenTwo
