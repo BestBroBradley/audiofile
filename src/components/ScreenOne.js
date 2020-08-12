@@ -3,7 +3,7 @@ import AcctContext from '../utils/AcctContext'
 
 function ScreenOne() {
 
-    const {userDetails, setDetails, handleChange} = useContext(AcctContext)
+    const {userDetails, handleChange} = useContext(AcctContext)
 
     console.log(userDetails)
 
@@ -11,8 +11,8 @@ function ScreenOne() {
         <div>
             <h1>First off, let's choose a username and password:</h1>
             <input type='text' value={userDetails.username} name="username" onChange={handleChange}></input>
-            <input placeholder='password'></input>
-            <input placeholder='confirm password'></input>
+            <input type='password' value={userDetails.password} name="password" onChange={handleChange}></input>
+            <input type='password' value={userDetails.confirm} name="confirm" onChange={handleChange}></input>
         </div>
     )
 }

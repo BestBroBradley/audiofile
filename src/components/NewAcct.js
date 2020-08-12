@@ -1,12 +1,14 @@
 import React, { useState, setState } from 'react'
 import AcctContext from '../utils/AcctContext'
 import ScreenOne from "./ScreenOne"
+import ScreenTwo from "./ScreenTwo"
 
 function NewAcct() {
 
     const [userDetails, setDetails] = useState({
         username: "",
         password: "",
+        confirm: "",
         title: true,
         artist: true,
         genre: true,
@@ -16,7 +18,8 @@ function NewAcct() {
         comments: false,
         rating: false,
         length: false,
-        composer: false
+        composer: false,
+        rarity: false
     })
 
     const [state, setState] = useState({
@@ -50,11 +53,15 @@ function NewAcct() {
         setDetails({...userDetails, [name]: value})
     }
 
+    const handleCheck = (event) => {
+        console.log(event.target)
+    }
+
     return (
-        <AcctContext.Provider value={{userDetails, setDetails, handleChange}}>
+        <AcctContext.Provider value={{userDetails, setDetails, handleCheck, handleChange}}>
         <div className="carousel">
             <div className="interior">
-                <ScreenOne current={screenArray[state.current]}/>
+                <ScreenTwo current={screenArray[state.current]}/>
             </div>
             <button onClick={back}>Back</button>
             <button onClick={next}>Next</button>
