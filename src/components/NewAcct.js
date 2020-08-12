@@ -17,9 +17,10 @@ function NewAcct() {
         condition: false,
         comments: false,
         rating: false,
-        length: false,
+        albumlength: false,
         composer: false,
-        rarity: false
+        rarity: false,
+        price: false
     })
 
     const [state, setState] = useState({
@@ -54,7 +55,15 @@ function NewAcct() {
     }
 
     const handleCheck = (event) => {
-        console.log(event.target)
+        const {name, value} = event.target
+        console.log(value)
+        if (userDetails[name]) {
+            setDetails({...userDetails, [name]: false})
+            console.log("Hit true")
+        } else {
+            setDetails({...userDetails, [name]: true})
+            console.log("Hit false")
+        }
     }
 
     return (

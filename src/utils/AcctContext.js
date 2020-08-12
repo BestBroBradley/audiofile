@@ -12,9 +12,10 @@ const AcctContext = React.createContext({
     condition: false,
     comments: false,
     rating: false,
-    length: false,
+    albumlength: false,
     composer: false,
-    rarity: false
+    rarity: false,
+    price: false
 })
 
 export default AcctContext
