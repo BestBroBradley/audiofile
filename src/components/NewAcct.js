@@ -27,13 +27,23 @@ function NewAcct() {
         current: 0
     })
 
+    const {username, password, confirm } = userDetails
+
     const next = () => {
-        let current = state.current
-        current += 1
-        if (current === 3) {
-            current = 0
+        if (username !== "" && password !== "" && confirm !== "" && password === confirm) {
+            let current = state.current
+            current += 1
+            if (current === 3) {
+                current = 0
+            }
+            setState({ ...state, "current": current })
+        } else if (username === "") {
+            alert("Username cannot be blank")
+        } else if (password === "" || confirm === "")  {
+            alert("Password areas cannot be left blank.")            
+        } else if (password !== confirm) {
+            alert("Password and confirmation do not match.")
         }
-        setState({ ...state, "current": current })
     }
 
     const back = () => {
@@ -76,7 +86,7 @@ function NewAcct() {
                     <>
                         <h1>We're happy you're here!</h1>
                         <div className="interior">
-                            <ScreenOne/>
+                            <ScreenOne />
                         </div>
                         <button onClick={next}>Next</button>
                     </>
@@ -85,13 +95,13 @@ function NewAcct() {
             case 1:
                 return (
                     <>
-                    <div className="interior">
-                        <ScreenTwo/>
-                    </div>
-                    <button onClick={back}>Back</button>
-                    <button onClick={handleSubmit}>Submit</button>
-                </>
-                    );
+                        <div className="interior">
+                            <ScreenTwo />
+                        </div>
+                        <button onClick={back}>Back</button>
+                        <button onClick={handleSubmit}>Submit</button>
+                    </>
+                );
             default:
                 break;
         }
@@ -100,7 +110,7 @@ function NewAcct() {
     return (
         <AcctContext.Provider value={{ userDetails, setDetails, handleCheck, handleChange }}>
             <div className="carousel">
-                    {displayScreen()}
+                {displayScreen()}
             </div>
         </AcctContext.Provider>
     )
