@@ -16,7 +16,7 @@ function NewAcct() {
         date: false,
         condition: false,
         comments: false,
-        rating: false,
+        rating: true,
         albumlength: false,
         composer: false,
         rarity: false,
