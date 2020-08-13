@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import background from './images/background.jpg'
 
 export const SiteWrapper = styled.div`
-  background: url(${background});
+  // background: url(${background});
   background-size: 100% auto;
   background-repeat: no-repeat;
   min-height: 100vh;
@@ -10,7 +10,7 @@ export const SiteWrapper = styled.div`
   flex-direction: column;
   font-size: calc(10px + 2vmin);
   position: relative;
-  color: lightgrey;
+  color: black;
 `
 
 export const NavWrapper = styled.div`
