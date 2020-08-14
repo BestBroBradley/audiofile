@@ -1,5 +1,4 @@
 import React from 'react'
-import Search from '../pages/search'
 
 const Details = (props) => {
 
