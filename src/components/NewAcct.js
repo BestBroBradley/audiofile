@@ -1,5 +1,6 @@
-import React, { useState, setState } from 'react'
+import React, { useState, useContext } from 'react'
 import AcctContext from '../utils/AcctContext'
+import UserContext from '../utils/UserContext'
 import ScreenOne from "./ScreenOne"
 import ScreenTwo from "./ScreenTwo"
 
@@ -27,7 +28,11 @@ function NewAcct() {
         current: 0
     })
 
-    const {username, password, confirm } = userDetails
+    const { userState, setUser } = useContext(UserContext)
+
+    const { username, password, confirm } = userDetails
+
+    const { title, artist, genre, tracks, date, condition, comments, rating, albumlength, composer, price, rarity } = userDetails
 
     const next = () => {
         if (username !== "" && password !== "" && confirm !== "" && password === confirm) {
@@ -39,8 +44,8 @@ function NewAcct() {
             setState({ ...state, "current": current })
         } else if (username === "") {
             alert("Username cannot be blank")
-        } else if (password === "" || confirm === "")  {
-            alert("Password areas cannot be left blank.")            
+        } else if (password === "" || confirm === "") {
+            alert("Password areas cannot be left blank.")
         } else if (password !== confirm) {
             alert("Password and confirmation do not match.")
         }
@@ -57,25 +62,38 @@ function NewAcct() {
 
     const handleChange = (event) => {
         const { value, name } = event.target
-        console.log(name)
-        console.log(value)
         setDetails({ ...userDetails, [name]: value })
     }
 
     const handleCheck = (event) => {
-        const { name, value } = event.target
-        console.log(value)
+        const { name } = event.target
         if (userDetails[name]) {
             setDetails({ ...userDetails, [name]: false })
-            console.log("Hit true")
         } else {
             setDetails({ ...userDetails, [name]: true })
-            console.log("Hit false")
         }
     }
 
     const handleSubmit = (event) => {
         event.preventDefault()
+        const newUser = {
+            username, password, options: {
+                title,
+                artist,
+                genre,
+                tracks,
+                date,
+                condition,
+                comments,
+                rating,
+                albumlength,
+                composer,
+                rarity,
+                price
+            }, library: [], wishlist: [], stores: []
+        }
+        setUser({...userState, ...newUser, password: ""})
+        console.log(newUser)
         alert("Submitted!")
     }
 

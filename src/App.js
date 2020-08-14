@@ -20,6 +20,7 @@ function App() {
     loggedin: true,
     username: "Test User",
     password: "password",
+    options: {},
     library: [{ title: "Born in the USA", artist: "Bruce Springsteen", genre: "rock" },
     { title: "Jazzman", artist: "Carole King", genre: "folk" }, { title: "Meteora", artist: "Linkin Park", genre: "hip hop/rock" }],
     wishlist: [],
