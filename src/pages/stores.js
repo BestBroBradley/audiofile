@@ -1,4 +1,5 @@
-import React, { setState } from 'react';
+import React, { useState } from 'react';
+import API from '../utils/API'
 import StoreSearch from '../components/StoreSearch'
 
 function Stores() {
@@ -20,6 +21,7 @@ function Stores() {
       <div>
         <header>
           Album Store Search
+          <StoreSearch search={search} setSearch={setSearch}/>
         </header>
       </div>
     );

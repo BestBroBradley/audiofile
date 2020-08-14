@@ -8,7 +8,7 @@ export default {
     yelpSearch: function(search) {
         const { type, term } = search
         switch (type) {
-            case location:
+            case "locale":
                 yelpURL = ""
                 return axios.create({
                     baseURL: `https://api.yelp.com/v3/businesses/search/${term}`,
@@ -18,7 +18,7 @@ export default {
                     }
                 })                
                 break;
-            case store:
+            case "store":
                 yelpURL = ""
                 return axios.get(yelpURL)
                 break;
