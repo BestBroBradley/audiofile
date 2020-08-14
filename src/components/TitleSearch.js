@@ -5,8 +5,6 @@ const TitleSearch = (props) => {
     const handleChange = props.handleChange
     const search = props.search
 
-    console.log(props)
-
     const submit = () => {
         alert("searched")
     }
