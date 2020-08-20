@@ -11,6 +11,8 @@ import Signin from './pages/signin'
 import Stores from './pages/stores'
 import Signup from './pages/signup'
 import Navbar from './components/Navbar'
+// Delete this later. This was created 8/20/20 to test if I got a cors error
+import ConnectionToBackendTest from './components/ConnectionToBackendTest';
 
 import { SiteWrapper } from './style'
 
@@ -43,6 +45,7 @@ function App() {
     <Router>
       <SiteWrapper>
         <UserContext.Provider value={{ userState, setUser }}>
+          <ConnectionToBackendTest />
           <Navbar />
           <Switch>
             <Route path="/" exact component={Landing} />

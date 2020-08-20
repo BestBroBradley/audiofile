@@ -1,15 +1,8 @@
 const express = require('express');
+const bodyParser = require('body-parser');
+
 const port = 3001;
-
-
 const app = express();
-
-// const cors = require('cors');
-// add this later when it is hosted somewhere else
-// const corsOptions = {
-  // origin: 'http://example.com',
-  // optionsSuccessStatus: 200
-// }
 
 // Environment variables
 const dotenv = require('dotenv');
@@ -18,6 +11,24 @@ dotenv.config();
 // console.log(process.env.PGPASSWORD);
 // console.log(process.env.PGHOST);
 // console.log(process.env.PGDATABASE);
+
+// Bodyparser middleware
+app.use(
+  bodyParser.urlencoded({
+      extended: true
+  })
+);
+
+// Cors solution
+app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
+
+
+
+
 
 // PG stuff move later
 const { Client } = require('pg');
@@ -49,7 +60,7 @@ app.get('/users', function(req, response) {
     name: 'fetch-user',
     text: 'SELECT * FROM audiofile.users'
   }
-  // console.log("Attempting to make query");
+  console.log("Attempting to make query");
   client.query(query, (err, res) => {
     // console.log("in the query");
     if (err) {
